@@ -1,0 +1,40 @@
+[
+  {
+    "id": 2,
+    "name": "no234",
+    "coordinates": {
+      "x": 234,
+      "y": 234
+    },
+    "creationDate": "2024-06-12",
+    "area": 2452.0,
+    "numberOfRooms": 23,
+    "numberOfBathrooms": 4,
+    "furnish": "BAD",
+    "transport": "FEW",
+    "house": {
+      "name": "wtr",
+      "year": 2031,
+      "numberOfFlatsOnFloor": 31
+    }
+  },
+  {
+    "id": 3,
+    "name": "no241",
+    "coordinates": {
+      "x": 334,
+      "y": 34
+    },
+    "creationDate": "2024-06-12",
+    "area": 235.0,
+    "numberOfRooms": 34,
+    "numberOfBathrooms": 5,
+    "furnish": "FINE",
+    "transport": "NORMAL",
+    "house": {
+      "name": "no34/4",
+      "year": 2010,
+      "numberOfFlatsOnFloor": 4
+    }
+  }
+]
