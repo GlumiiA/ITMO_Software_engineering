@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', 'Verdana', sans-serif;
+}
+
+.name, .isu, .var {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Контейнер для трех столбцов */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    height: auto;
+}
+
+/* Стили для столбцов */
+.basic-container{
+    flex: 33%;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container{
+    flex: 30%;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка формы */
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стили для элементов формы */
+.formX, .formY, .formR {
+    margin-bottom: 30px;
+}
+
+/* Стили для полей ввода и спиннера */
+input[type="text"], .ui-spinner-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+button, .ui-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .ui-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Общие отступы для кнопок и других элементов */
+.buttons-conteiner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+#results-table {
+    flex: 47%;
+    margin: 0 6px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: max-content;
+}
+/* Добавим фиксированную высоту для контейнеров для лучшей визуализации */
+.basic-container {
+    height: 600px;
+}
+
+/* Общие стили для кнопок */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Стили для кнопок отправки и очистки */
+button, .ui-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили для таблицы */
+.resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resultsTable th, .resultsTable td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+}
+
+.resultsTable th {
+    background-color: #f2f2f2;
+}
+
+/* Общие отступы для форм и элементов */
+input, select {
+    margin-top: 5px;
+}
+
+/* Стили для контейнера формы */
+.formR {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для текстового вывода */
+#r {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Стили для контейнера кнопок */
+.Rbuttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+/* Стили для кнопок */
+.Rbutton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Эффект наведения для кнопок */
+.Rbutton:hover {
+    background-color:  #0056b3;
+    outline: none;
+}
