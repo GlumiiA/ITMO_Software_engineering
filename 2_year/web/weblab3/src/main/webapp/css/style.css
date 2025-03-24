@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', 'Verdana', sans-serif;
+}
+
+.name, .isu, .var {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 100vh; /* Высота на весь экран */
+}
+.datetime-container {
+    display: flex; /* Используем flexbox для центрирования кнопки */
+    justify-content: center; /* Центрирование кнопки внутри контейнера */
+    align-items: center;
+    width: 100%; /* Ширина 100% для полного контейнера */
+    padding: 10px;
+}
+
+.datetime {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    border: black;
+    border-radius: 10px;
+    background: maroon;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+    background: url('../clock.png') center/cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    margin-top: 40px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        z-index: 111;
+        background: black;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты точки */
+    }
+
+    .hour {
+        top: 50%; /* Центрируем стрелку */
+        left: 50%; /* Центрируем стрелку */
+        transform: translate(-51%, -52%);
+        position: absolute;
+
+        .hours {
+            width: 160px;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 50%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 7px;
+                height: 83px;
+                background: maroon;
+                z-index: 10;
+                border-radius: 6px 6px 0 0;
+            }
+        }
+    }
+
+    .minute {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -48%);
+        position: absolute;
+
+        .minutes {
+            width: 190px;
+            height: 190px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 50%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 100px;
+                background: #091921;
+                z-index: 11;
+                border-radius: 6px 6px 0 0;
+            }
+        }
+    }
+
+    .second {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .seconds {
+            width: 230px;
+            height: 230px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 50%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 130px;
+                background: black;
+                z-index: 12;
+                border-radius: 6px 6px 0 0;
+            }
+        }
+    }
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+/* Эффект наведения */
+
+.button-go-main {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.button-go-main:hover {
+    background-color: #0056b3;
+}

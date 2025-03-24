@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</h:head>
+<h:body>
+    <div class="header">
+        <div class="name">Ибрагимова Айгуль Ильгизовна | P3211</div>
+        <div class="isu">| ИСУ: 408675</div>
+        <div class="var">| Вариант: 21040</div>
+    </div>
+    <div class="main-container">
+        <div class="basic-container">
+            <h:panelGroup id="graph" layout="block" onclick="setPoint(event)">
+                <ui:include src="svg/image.svg"/>
+            </h:panelGroup>
+        </div>
+        <h:form id="graph-form">
+            <h:inputHidden id="xGraphValue" value="#{pointBean.x}"/>
+            <h:inputHidden id="yGraphValue" value="#{pointBean.y}"/>
+            <h:inputHidden id="rGraphValue" value="#{pointBean.r}"/>
+            <h:commandButton id="handleClick" styleClass="hidden" onclick="drawPoints();">
+                <f:ajax execute="@form" listener="#{resultsManager.addPoint(pointBean)}" render="results-table" oncomplete="drawPoints()"/>
+            </h:commandButton>
+        </h:form>
+        <div class="form-container">
+            <h:form action="controller" method="post" id="coordinates">
+                <div class="formX">
+                    <h:outputLabel for="xSpinner" value="Выберите X:     "/>
+                    <p:spinner id="xSpinner" value="#{pointBean.x}" required="true"
+                               min="-4.0" max="4.0" stepFactor="0.5" />
+                </div>
+                <div class="formY">
+                    <h:outputLabel for="yInput" value="Выберите Y:"/>
+                    <h:inputText id="yInput" value="#{pointBean.y}" required="true">
+                        <f:validateDoubleRange minimum="-3" maximum="5"
+                                               validatorMessage="Значение должно быть в диапазоне от -3 до 5." />
+                    </h:inputText>
+                </div>
+                <div class="formR">
+                    <h:form id="form-R">
+                        <h:outputLabel for="rButtons" value="Выберите R:"/>
+                        <h:panelGrid id="rButtons" columns="5">
+                            <h:outputText id="r" name="r" value="#{pointBean.r} "/>
+<!--                            TODO в таблицу заноситься не тот r-->
+                            <div class="Rbuttons-container">
+                                <h:commandButton value="1" type="button" name="Rbutton" styleClass="Rbutton" onclick="setR(1);">
+                                    <f:ajax render="r" listener="#{pointBean.setR(1)}"/>
+<!--                                    <f:ajax execute="@form" listener="#{resultsManager.updateAllPoints(1)}" render="results-table"/>-->
+                                </h:commandButton>
+                                <h:commandButton value="2" type="button" name="Rbutton" styleClass="Rbutton" onclick="setR(2);">
+                                    <f:ajax render="r" listener="#{pointBean.setR(2)}"/>
+<!--                                    <f:ajax execute="@form" listener="#{resultsManager.updateAllPoints(2)}" render="results-table"/>-->
+                                </h:commandButton>
+                                <h:commandButton value="3" type="button" name="Rbutton" styleClass="Rbutton" onclick="setR(3);">
+                                    <f:ajax render="r" listener="#{pointBean.setR(3)}"/>
+<!--                                    <f:ajax execute="@form" listener="#{resultsManager.updateAllPoints(3)}" render="results-table"/>-->
+                                </h:commandButton>
+                                <h:commandButton value="4" type="button" name="Rbutton" styleClass="Rbutton" onclick="setR(4);">
+                                    <f:ajax render="r" listener="#{pointBean.setR(4)}"/>
+                                </h:commandButton>
+                                <h:commandButton value="5" type="button" name="Rbutton" styleClass="Rbutton" onclick="setR(5);">
+                                    <f:ajax render="r" listener="#{pointBean.setR(5)}"/>
+                                </h:commandButton>
+                            </div>
+                        </h:panelGrid>
+                    </h:form>
+                </div>
+
+                <div class="buttons-conteiner">
+                    <h:commandButton id="submit" value="Отправить">
+                        <f:ajax execute="@form" listener="#{resultsManager.addPoint(pointBean)}" render="results-table" oncomplete="drawPoints()"/>
+                    </h:commandButton>
+                    <h:commandButton id="clear" value="Очистить"  onclick="clearPoints();">
+                        <f:ajax execute="@form" listener="#{resultsManager.clearResults()}" render="results-table"/>
+                    </h:commandButton>
+                    <button onclick="location.href='index.xhtml'" class="btn-index">назад</button>
+                </div>
+            </h:form>
+        </div>
+
+        <p:dataTable styleClass="resultsTable" id="results-table" value="#{resultBean.points}" var="point"
+                     paginator="true"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                     rows="6" lazy="true" paginatorPosition="bottom" paginatorAlwaysVisible="true"
+                     style="width: 750px">
+            <div class="columns-container">
+                <p:column styleClass="new-cell" class="little-columns">
+                    <f:facet name="header">X</f:facet>
+                    <h:outputText value="#{point.x}"/>
+                </p:column>
+
+                <p:column styleClass="new-cell" class="little-columns">
+                    <f:facet name="header">Y</f:facet>
+                    <h:outputText value="#{point.y}"/>
+                </p:column>
+
+                <p:column styleClass="new-cell" class="little-columns">
+                    <f:facet name="header">R</f:facet>
+                    <h:outputText value="#{point.r}"/>
+                </p:column>
+
+                <p:column styleClass="new-cell" class="big-colums">
+                    <f:facet name="header">Попал?</f:facet>
+                    <h:outputText value="#{point.is_hit ? 'true' : 'false' }"/>
+                </p:column>
+
+                <p:column styleClass="new-cell" class="big-colums">
+                    <f:facet name="header">Время</f:facet>
+                    <h:outputText value="#{point.curTime}"/>
+                </p:column>
+
+                <p:column styleClass="new-cell" class="big-colums">
+                    <f:facet name="header">Время вып.</f:facet>
+                    <h:outputText value="#{point.executeTime}"/>
+                </p:column>
+            </div>
+        </p:dataTable>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</h:body>
+</html>
