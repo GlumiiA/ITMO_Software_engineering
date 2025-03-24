@@ -1,0 +1,103 @@
+* {
+    font-family: serif;
+    font-size: ;
+}
+
+.label {
+       font-size: 6px;
+
+}
+.name, .isu, .var {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.basic-container {
+
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+.graph {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-block {
+    flex: 2;
+    background: #e9ecef;
+    padding: 20px 25px;
+    border-radius: 8px;
+}
+
+.main-block form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputX, .inputY, .inputR {
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-right: 10px;
+}
+
+.inputY {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttonY {
+    margin: 5px;
+}
+.buttonY:active {
+    background-color: #007bff;
+}
+.main-block_button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.main-block_button a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-block_button:hover {
+    background-color: #0056b3;
+}
+
+.result-table {
+    width: 100%;
+    padding:  0px 15px;
+
+}
+
+.result {
+    width: 100%;
+    border-collapse: collapse;
+}
+.result thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.result th {
+    text-align: center;
+}
