@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import sympy as sp
 
 
 # Определение функций
@@ -18,10 +17,6 @@ def f3(x):
 
 def f4(x):
     return 3 * x ** 3 + 1.7 * x ** 2 - 15.42 * x + 6.89
-
-def numerical_ddf(f, x, h=1e-5):
-    """Численное вычисление второй производной"""
-    return (f(x + h) - 2*f(x) + f(x - h)) / (h**2)
 
 # Определение производных функций
 def df1(x):
@@ -200,10 +195,9 @@ def plot_function(f, a, b, root=None):
     x_min = a - 0.5 * width
     x_max = b + 0.5 * width
     x = np.linspace(x_min, x_max, 500)
-    # x = np.linspace(a, b, 400)
     y = f(x)
 
-    plt.figure(figsize=(8, 6))
+    plt.figure(figsize=(10, 6))
     plt.plot(x, y, label="f(x)")
     plt.axhline(0, color='black', linewidth=1, linestyle='--', label="y = 0")
     plt.axvline(0, color='black', linewidth=1, linestyle='--', label="x = 0")
@@ -242,96 +236,70 @@ def bisection_method(f, a, b, tol):
     return (a + b) / 2.0, iterations
 
 
-# def newton_method(f, df, a, b, tol, max_iter=100):
-#     """Метод Ньютона с визуализацией, включая случаи выхода за границы"""
-#     x0 = (a + b) / 2  # Начальное приближение
-#     history = []  # Для хранения истории итераций
-#
-#     fig, ax = plt.subplots(figsize=(10, 6))
-#
-#     # Рисуем функцию
-#     x_vals = np.linspace(a - (b - a) / 2, b + (b - a) / 2, 400)  # Расширенный интервал
-#     ax.plot(x_vals, f(x_vals), label='f(x)')
-#     ax.axhline(0, color='black', linewidth=0.5)
-#     ax.axvline(a, color='red', linestyle='--', linewidth=0.7, label='Границы интервала')
-#     ax.axvline(b, color='red', linestyle='--', linewidth=0.7)
-#
-#     for i in range(max_iter):
-#         try:
-#             # Вычисляем новое приближение
-#             df_x0 = df(x0)
-#             if abs(df_x0) < 1e-12:
-#                 raise ValueError("Производная слишком близка к нулю")
-#
-#             x1 = x0 - f(x0) / df_x0
-#             history.append((x0, x1))
-#
-#             # Рисуем касательную
-#             tangent_line = lambda x: df_x0 * (x - x0) + f(x0)
-#             ax.plot(x_vals, tangent_line(x_vals), '--', alpha=0.4, linewidth=0.7)
-#             ax.plot([x0, x1], [f(x0), 0], 'o-', markersize=4)
-#
-#             # Проверка сходимости
-#             if abs(x1 - x0) < tol:
-#                 ax.set_title(f'Метод Ньютона: Сходится за {i + 1} итераций')
-#                 ax.legend()
-#                 plt.show()
-#                 return x1, i + 1
-#
-#             x0 = x1
-#
-#         except Exception as e:
-#             ax.set_title(f'Метод Ньютона: Ошибка на итерации {i + 1} - {str(e)}')
-#             ax.legend()
-#             plt.show()
-#             raise ValueError(f"Ошибка на итерации {i + 1}: {e}")
-#
-#     ax.set_title(f'Метод Ньютона: Не сошлось за {max_iter} итераций')
-#     ax.legend()
-#     plt.show()
-#     raise ValueError(f"Не сошлось за {max_iter} итераций")
-
-
-def newton_method(f, df, a, b, tol, max_iter=100):
-    """
-    Метод Ньютона с проверками:
-    - Не выходит ли решение за границы [a, b]
-    - Не равна ли производная нулю
-    - Сходится ли метод
-    """
+def newton_method(f, df, a, b, tol, max_iter=100, visualize=True):
     # Выбираем начальное приближение
     if f(a) * numerical_ddf(f, a) > 0:
         x0 = a
     elif f(b) * numerical_ddf(f, b) > 0:
         x0 = b
     else:
-        x0 = (a + b) / 2  # Если не подходит a или b, берём середину
+        x0 = (a + b) / 2
+
+    if visualize:
+        fig, ax = plt.subplots(figsize=(10, 6))
+        x_vals = np.linspace(a - (b - a) / 2, b + (b - a) / 2, 400)
+        ax.plot(x_vals, f(x_vals), label='f(x)')
+        plt.axhline(0, color='black', linewidth=1, linestyle='--', label="y = 0")
+        plt.axvline(0, color='black', linewidth=1, linestyle='--', label="x = 0")
+        plt.axvline(a, color='red', linewidth=1.5, linestyle='--',
+                    label=f'Граница интервала: [{a:.2f}, {b:.2f}]')
+        plt.axvline(b, color='red', linewidth=1.5, linestyle='--')
 
     iterations = 0
     while iterations < max_iter:
         try:
             df_x0 = df(x0)
-            if abs(df_x0) < 1e-10:  # Избегаем деления на ноль
-                raise ValueError("Производная близка к нулю. Метод не сходится.")
+            if abs(df_x0) < 1e-12:
+                raise ValueError("Производная слишком близка к нулю")
 
             x1 = x0 - f(x0) / df_x0
 
-            # Проверяем, что x1 не вышел за границы
-            if x1 < a or x1 > b:
-                raise ValueError("Решение вышло за границы интервала.")
+            if visualize:
+                tangent = lambda x: df_x0 * (x - x0) + f(x0)
+                ax.plot(x_vals, tangent(x_vals), '--', alpha=0.3)
+                ax.plot([x0, x1], [f(x0), 0], 'o-', markersize=4)
+                plt.grid(True)
 
-            # Проверяем условие сходимости
+            if x1 < a or x1 > b:
+                if visualize:
+                    ax.set_title(f'Внимание: x={x1:.3f} вне интервала! Итерация {iterations + 1}')
+                    ax.plot(x1, 0, 'o', color='red')
+                    plt.show()
+                x1 = np.clip(x1, a, b)  # Возвращаем значение в интервал
+                # Можно добавить здесь дополнительные корректировки
+
             if abs(x1 - x0) < tol:
-                return x1, iterations
+                if visualize:
+                    plt.scatter(x1, f(x1), color='red', label=f"Корень: {x1:.5f}")
+                    ax.plot(x1, 0, 'o', color='red')
+                    ax.set_title(f'Сходится за {iterations + 1} итераций')
+                    ax.legend()
+                    plt.show()
+                return x1, iterations + 1
 
             x0 = x1
             iterations += 1
 
         except Exception as e:
+            if visualize:
+                ax.set_title(f'Ошибка: {str(e)}')
+                plt.show()
             raise ValueError(f"Ошибка на итерации {iterations}: {e}")
 
-    raise ValueError(f"Метод не сошёлся за {max_iter} итераций.")
-
+    if visualize:
+        ax.set_title(f'Не сошлось за {max_iter} итераций')
+        plt.show()
+    raise ValueError(f"Не сошлось за {max_iter} итераций")
 
 #  Метод простой итерации
 def simple_iteration_method(phi, a, b, tol, max_iter=1000):
@@ -391,7 +359,7 @@ def main():
                     print(f"x: {root:.6f}")
                     print(f"f(x): {f(root):.6e}")
                     print(f"Number of iterations: {iterations}")
-                    plot_function(f, a, b, root)
+                    # plot_function(f, a, b, root)
                 except ValueError as e:
 
                     print(f"Ошибка: {e}")
