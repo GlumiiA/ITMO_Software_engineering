@@ -1,3 +1,0 @@
-x: 0.7853981633974483
-f(x): 0.0
-Number of iterations: 3
