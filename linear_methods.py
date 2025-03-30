@@ -186,11 +186,32 @@ def check_iteration_convergence(dphi, a, b):
     derivative = np.abs(dphi(x))  # Численное вычисление производной
     return np.all(derivative < 1)
 
+def check_newton_convergence(f, df, a, b):
+    # 1. Проверка существования корня
+    if f(a) * f(b) >= 0:
+        print(f"Условие f(a)*f(b) < 0 не выполняется (f(a)={f(a):.3f}, f(b)={f(b):.3f})")
+        return False
+
+    # 2. Проверка знака f'(x)
+    x_samples = np.linspace(a, b, 100)
+    df_values = df(x_samples)
+    df_sign_changes = np.sum(np.diff(np.sign(df_values)) != 0)
+
+    if df_sign_changes > 0:
+        print(f"f'(x) меняет знак {df_sign_changes} раз на интервале")
+        return False
+
+    # 3. Проверка знака f''(x)
+    ddf_values = numerical_ddf(f, x_samples)
+    ddf_sign_changes = np.sum(np.diff(np.sign(ddf_values)) != 0)
+
+    if ddf_sign_changes > 0:
+        print(f"f''(x) меняет знак {ddf_sign_changes} раз на интервале")
+        return False
 
 
 # Построение графика
 def plot_function(f, a, b, root=None):
-    # Автоматически расширяем интервал на 20% в обе стороны
     width = b - a
     x_min = a - 0.5 * width
     x_max = b + 0.5 * width
@@ -261,7 +282,6 @@ def newton_method(f, df, a, b, tol, max_iter=100, visualize=True):
             df_x0 = df(x0)
             if abs(df_x0) < 1e-12:
                 raise ValueError("Производная слишком близка к нулю")
-
             x1 = x0 - f(x0) / df_x0
 
             if visualize:
@@ -355,6 +375,8 @@ def main():
 
             elif method_choice == 2:
                 try:
+                    if not check_newton_convergence(f, df, a, b):
+                        print("Условие сходимости метода Ньютона не выполнено.")
                     root, iterations = newton_method(f, df, a, b, tol)  # tol передается корректно
                     print(f"x: {root:.6f}")
                     print(f"f(x): {f(root):.6e}")
