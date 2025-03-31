@@ -184,6 +184,7 @@ def verify_data(f, interval, tol):
 def check_iteration_convergence(dphi, a, b):
     x = np.linspace(a, b, 1000)
     derivative = np.abs(dphi(x))  # Численное вычисление производной
+    print(F"MAX : {np.max(np.abs(dphi(x)))}")
     return np.all(derivative < 1)
 
 def check_newton_convergence(f, df, a, b):
@@ -223,21 +224,24 @@ def plot_function(f, a, b, root=None):
     plt.axhline(0, color='black', linewidth=1, linestyle='--', label="y = 0")
     plt.axvline(0, color='black', linewidth=1, linestyle='--', label="x = 0")
 
+    # Отметка корня
     if root is not None:
         plt.scatter(root, f(root), color='red', label=f"Корень: {root:.5f}")
 
-    # Вертикальные границы интервала [a, b]
+    # Границы интервала
     plt.axvline(a, color='red', linewidth=1.5, linestyle='--',
-                    label=f'Граница интервала: [{a:.2f}, {b:.2f}]')
+                label=f'Граница интервала: [{a:.2f}, {b:.2f}]')
     plt.axvline(b, color='red', linewidth=1.5, linestyle='--')
+
+    plt.legend(loc='lower left', bbox_to_anchor=(0.0, 0.0),
+               frameon=True, fontsize=10)
 
     plt.xlabel("x")
     plt.ylabel("f(x)")
     plt.title("График функции")
-    plt.legend()
     plt.grid(True)
+    plt.tight_layout()
     plt.show()
-
 
 # Метод половинного деления
 def bisection_method(f, a, b, tol):
@@ -257,7 +261,7 @@ def bisection_method(f, a, b, tol):
     return (a + b) / 2.0, iterations
 
 
-def newton_method(f, df, a, b, tol, max_iter=100, visualize=True):
+def newton_method(f, df, a, b, tol, max_iter=100, visualize=False):
     # Выбираем начальное приближение
     if f(a) * numerical_ddf(f, a) > 0:
         x0 = a
@@ -322,22 +326,17 @@ def newton_method(f, df, a, b, tol, max_iter=100, visualize=True):
     raise ValueError(f"Не сошлось за {max_iter} итераций")
 
 #  Метод простой итерации
-def simple_iteration_method(phi, a, b, tol, max_iter=1000):
+def simple_iteration_method(f, phi, a, b, tol, max_iter=1000):
     """
     Метод простой итерации для решения уравнения x = phi(x).
-
-    Параметры:
-    phi -- функция итерации
-    a, b -- границы интервала (для выбора начального приближения)
-    tol -- допустимая погрешность
-    max_iter -- максимальное число итераций
-    """
-    x0 = (a + b) / 2  # Начальное приближение - середина интервала
+    # """
+    # x0 = (a + b) / 2  # Начальное приближение - середина интервала
+    x0 = a
 
     for iterations in range(1, max_iter + 1):
         x1 = phi(x0)
         # Условие остановки: |x1 - x0| < tol
-        if abs(x1 - x0) < tol:
+        if abs(x1 - x0) < tol and abs(f(x1)) < tol:
             return x1, iterations
         x0 = x1
     raise ValueError(f"Метод не сошёлся за {max_iter} итераций.")
@@ -381,18 +380,18 @@ def main():
                     print(f"x: {root:.6f}")
                     print(f"f(x): {f(root):.6e}")
                     print(f"Number of iterations: {iterations}")
-                    # plot_function(f, a, b, root)
+                    plot_function(f, a, b, root)
                 except ValueError as e:
 
                     print(f"Ошибка: {e}")
             elif method_choice == 3:
                 try:
                     if not check_iteration_convergence(dphi, a, b):
-                        print("Условие сходимости метода простой итерации не выполнено.")
+                        print("Достаточное условие сходимости метода простой итерации не выполнено.")
                         print(f"f(a):{f(a)},  f(b):{f(b)}")
-                    root, iterations = simple_iteration_method(phi, a, b, tol)
-                    print(f"phi(a)  : {phi(a)}")
-                    print(f"phi(b)  : {phi(b)}")
+                    root, iterations = simple_iteration_method(f, phi, a, b, tol)
+                    print(f"dphi(a)  : {dphi(a)}")
+                    print(f"dphi(b)  : {dphi(b)}")
                     print(f"λ  : {lambda_}")
                     f_root = f(root)
                     print(f"x: {root}")
