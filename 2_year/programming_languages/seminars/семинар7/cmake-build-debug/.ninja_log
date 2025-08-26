@@ -1,0 +1,5 @@
+# ninja log v6
+13	1005	7552654114139719	CMakeFiles/untitled1.dir/main.cpp.obj	51b7f9e6c8a8f0cd
+1007	2022	7552654124082551	untitled1.exe	dfb65993b2e1c83e
+265	1436	7552646903835407	CMakeFiles/untitled1.dir/stack-smash.c.obj	30d80d29829e1471
+488	1376	7552646906068400	CMakeFiles/untitled1.dir/check-pwd.c.obj	3f09c5c4b6537cdf

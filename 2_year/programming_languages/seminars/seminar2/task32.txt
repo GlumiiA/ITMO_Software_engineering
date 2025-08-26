@@ -1,0 +1,68 @@
+section .data
+codes db '0123456789abcdef'  ; Массив символов для вывода в hex
+
+section .text
+global _start
+
+_start:
+    call my_function         ; Вызов тестовой функции
+    call exit                ; Завершение программы
+
+exit:
+    mov     rax, 60         ; Системный вызов для выхода
+    xor     rdi, rdi        ; Код выхода 0
+    syscall
+
+print_hex:
+    mov     rdx, 1          
+    mov     rcx, 64         ; Количество бит (8 байт * 8 бит)
+.loop:
+    push    rax             
+    sub     rcx, 4          ; Переходим к следующему 4-битному блоку
+    sar     rdi, cl         ; Сдвигаем число
+    and     rdi, 0xf        
+    lea     rsi, [codes + rdi] ; Находим символ в таблице
+
+    mov     rax, 1          ; Системный вызов для записи
+    mov     rdi, 1          ; Стандартный вывод
+    syscall                 
+
+    pop     rcx             
+
+    pop     rax             
+    test    rcx, rcx       ; Проверяем, закончили ли мы
+    jnz     .loop           ; Повторяем цикл, если не закончили
+
+    ret
+
+my_function:
+    ; Выравниваем стек (нужно выровнять на 16 байт)
+    push    rbp             
+    mov     rbp, rsp        ; Устанавливаем базовый указатель
+
+    sub     rsp, 32         ; Выделяем место под 4 переменные (4 * 8 байт)
+
+    ; Записываем значения
+    mov     rax, 0x61616161 ; aa
+    mov     [rbp - 8], rax  
+    mov     rax, 0x62626262 ; bb
+    mov     [rbp - 16], rax  
+    mov     rax, 0x63636363 ; cc
+    mov     [rbp - 24], rax  
+    mov     rax, 0x66666666 ; ff
+    mov     [rbp - 32], rax  
+
+    ; Выводим значения на экран
+    mov     rax, [rbp - 8]  ; Загружаем aa
+    call print_hex           ; Вызываем функцию печати
+    mov     rax, [rbp - 16] ; Загружаем bb
+    call print_hex           ; Вызываем функцию печати
+    mov     rax, [rbp - 24] ; Загружаем cc
+    call print_hex           ; Вызываем функцию печати
+    mov     rax, [rbp - 32] ; Загружаем ff
+    call print_hex           ; Вызываем функцию печати
+
+    ; Освобождаем стек и возвращаемся
+    mov     rsp, rbp        ; Восстанавливаем стек
+    pop     rbp             
+    ret

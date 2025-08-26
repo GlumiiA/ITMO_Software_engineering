@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="untitled2" targetName="untitled2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0000db0f-cd12-4a33-918b-779bc0c54136" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+    <option name="clangWarnings" value="-Wno-unused-variable,-Wno-infinite-recursion,-Wno-array-bounds,-Wno-return-stack-address,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wuninitialized,-Wunused-label,-Wunused-lambda-capture,-Wno-multichar" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2sXFkVgdax2gfJ2UbTxXvb7hJ7p" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.CMakeLists.txt.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.HeapSort.cpp (1).executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.HeapSort.cpp.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.M.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.Mv2.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.P.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.a.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.e.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ex.cpp (1).executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.ex.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.f.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.frist.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.g.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.h.cpp (1).executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.h.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.i.cpp (1).executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.i.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.i.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.j.cpp.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.k.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.k_fail.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.l.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.n.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.o.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.second.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.shad.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.shad2.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.shad3.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.t1005v2.cpp.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.t1160.cpp.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.t1207.cpp.executor&quot;: &quot;Debug&quot;,
+    &quot;C/C++ File.t1207v2.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.t1494.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.t1521.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.t1726.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.t1806.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.untitled2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ibraa/CLionProjects/untitled2/sobes/Single_Number.cpp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ibraa/CLionProjects/untitled2/main.cpp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ibraa\CLionProjects\untitled2\block3" />
+      <recent name="C:\Users\ibraa\CLionProjects\untitled2\block2" />
+      <recent name="C:\Users\ibraa\CLionProjects\untitled2\block1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.Mv2.cpp">
+    <configuration name="untitled2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="untitled2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled2" RUN_TARGET_NAME="untitled2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CMakeLists.txt" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="CMakeLists.txt" CONFIG_NAME="CMakeLists.txt">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\CMakeLists.txt" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeapSort.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="HeapSort.cpp" CONFIG_NAME="HeapSort.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block2\HeapSort.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="M.cpp" CONFIG_NAME="M.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block4\M.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mv2.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="Mv2.cpp" CONFIG_NAME="Mv2.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\sobes\Single_Number.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="e.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="e.cpp" CONFIG_NAME="e.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block2\e.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="g.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="g.cpp" CONFIG_NAME="g.cpp">
+      <option name="sourceFile" value="shad\g.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="h.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="h.cpp" CONFIG_NAME="h.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block2\h.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="k.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="k.cpp" CONFIG_NAME="k.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block3\k.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="k_fail.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="k_fail.cpp" CONFIG_NAME="k_fail.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block3\k_fail.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="second.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="second.cpp" CONFIG_NAME="second.cpp">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\shad\second.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="t1521" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="t1521" CONFIG_NAME="t1521">
+      <option name="sourceFile" value="C:\Users\ibraa\CLionProjects\untitled2\block3\t1521.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="t1521.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="t1521.cpp" CONFIG_NAME="t1521.cpp">
+      <option name="sourceFile" value="block3\t1521.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="t1806.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled2" TARGET_NAME="t1806.cpp" CONFIG_NAME="t1806.cpp">
+      <option name="sourceFile" value="block4\t1806.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.CMakeLists.txt" />
+      <item itemvalue="C/C++ File.HeapSort.cpp" />
+      <item itemvalue="C/C++ File.M.cpp" />
+      <item itemvalue="C/C++ File.e.cpp" />
+      <item itemvalue="C/C++ File.h.cpp" />
+      <item itemvalue="C/C++ File.k.cpp" />
+      <item itemvalue="C/C++ File.k_fail.cpp" />
+      <item itemvalue="C/C++ File.second.cpp" />
+      <item itemvalue="C/C++ File.Mv2.cpp" />
+      <item itemvalue="C/C++ File.g.cpp" />
+      <item itemvalue="C/C++ File.t1521" />
+      <item itemvalue="C/C++ File.t1521.cpp" />
+      <item itemvalue="C/C++ File.t1806.cpp" />
+      <item itemvalue="CMake Application.untitled2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.Mv2.cpp" />
+        <item itemvalue="C/C++ File.t1521" />
+        <item itemvalue="C/C++ File.g.cpp" />
+        <item itemvalue="C/C++ File.t1521.cpp" />
+        <item itemvalue="C/C++ File.t1806.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0000db0f-cd12-4a33-918b-779bc0c54136" name="Changes" comment="" />
+      <created>1738594155958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738594155958</updated>
+      <workItem from="1738594157503" duration="4603000" />
+      <workItem from="1738948461351" duration="6697000" />
+      <workItem from="1739008848833" duration="5093000" />
+      <workItem from="1739050494984" duration="8000" />
+      <workItem from="1739198226319" duration="7851000" />
+      <workItem from="1739308588309" duration="6000" />
+      <workItem from="1739455260451" duration="7554000" />
+      <workItem from="1739703602767" duration="598000" />
+      <workItem from="1739714913970" duration="3326000" />
+      <workItem from="1739724830405" duration="821000" />
+      <workItem from="1739957456830" duration="4212000" />
+      <workItem from="1739969818007" duration="7588000" />
+      <workItem from="1740053696569" duration="60531000" />
+      <workItem from="1740319105789" duration="6954000" />
+      <workItem from="1740326882015" duration="7245000" />
+      <workItem from="1740339619573" duration="2082000" />
+      <workItem from="1740345957789" duration="534000" />
+      <workItem from="1740408854543" duration="12216000" />
+      <workItem from="1740582044599" duration="158000" />
+      <workItem from="1740585793681" duration="2876000" />
+      <workItem from="1740605284261" duration="1399000" />
+      <workItem from="1740607273751" duration="831000" />
+      <workItem from="1740635306216" duration="11692000" />
+      <workItem from="1740753974385" duration="9052000" />
+      <workItem from="1740955525841" duration="292000" />
+      <workItem from="1740986041921" duration="2794000" />
+      <workItem from="1741010808459" duration="6662000" />
+      <workItem from="1741112473403" duration="30829000" />
+      <workItem from="1741585406544" duration="17713000" />
+      <workItem from="1741794829291" duration="1925000" />
+      <workItem from="1741943802289" duration="8727000" />
+      <workItem from="1742016841945" duration="11761000" />
+      <workItem from="1742114694223" duration="14547000" />
+      <workItem from="1742226249190" duration="6253000" />
+      <workItem from="1742289155156" duration="712000" />
+      <workItem from="1742644026414" duration="2015000" />
+      <workItem from="1742654347297" duration="8347000" />
+      <workItem from="1742736440822" duration="7833000" />
+      <workItem from="1742818935273" duration="14836000" />
+      <workItem from="1743020739206" duration="2157000" />
+      <workItem from="1743253052329" duration="7000" />
+      <workItem from="1743577951662" duration="4800000" />
+      <workItem from="1743587341511" duration="17520000" />
+      <workItem from="1743847785117" duration="347000" />
+      <workItem from="1743848250251" duration="186000" />
+      <workItem from="1743848468055" duration="20282000" />
+      <workItem from="1744008719593" duration="12949000" />
+      <workItem from="1744056424657" duration="9975000" />
+      <workItem from="1744473077689" duration="19798000" />
+      <workItem from="1744559107645" duration="82000" />
+      <workItem from="1744634853644" duration="1647000" />
+      <workItem from="1744890769119" duration="11999000" />
+      <workItem from="1744918413516" duration="5584000" />
+      <workItem from="1745017354636" duration="4159000" />
+      <workItem from="1745104585117" duration="7066000" />
+      <workItem from="1745137582323" duration="7834000" />
+      <workItem from="1745146681079" duration="949000" />
+      <workItem from="1745251665780" duration="2636000" />
+      <workItem from="1745680153108" duration="960000" />
+      <workItem from="1745681200065" duration="2729000" />
+      <workItem from="1746366024252" duration="12340000" />
+      <workItem from="1746638899032" duration="12836000" />
+      <workItem from="1746664065829" duration="1159000" />
+      <workItem from="1746729401611" duration="14430000" />
+      <workItem from="1746824837935" duration="66000" />
+      <workItem from="1747338776320" duration="4842000" />
+      <workItem from="1747393104357" duration="20220000" />
+      <workItem from="1747573821299" duration="24105000" />
+      <workItem from="1748010951860" duration="72000" />
+      <workItem from="1748076766397" duration="8053000" />
+      <workItem from="1748262730061" duration="13732000" />
+      <workItem from="1750454747118" duration="8670000" />
+      <workItem from="1750689574048" duration="5053000" />
+      <workItem from="1750765325699" duration="2567000" />
+      <workItem from="1750787585169" duration="1826000" />
+      <workItem from="1751028678472" duration="3000" />
+      <workItem from="1751029062559" duration="1579000" />
+      <workItem from="1756211799367" duration="92000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block1/d.cpp</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block1/a.cpp</url>
+          <line>23</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block1/a.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block1/a.cpp</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block2/g.cpp</url>
+          <line>37</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block3/l.cpp</url>
+          <line>49</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block3/l.cpp</url>
+          <line>50</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block3/l.cpp</url>
+          <line>47</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block3/l.cpp</url>
+          <line>39</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block4/t1160.cpp</url>
+          <line>17</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../algorithms/block4/t1160.cpp</url>
+          <line>18</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CppFileRunConfiguration">
+        <watch expression="letter_frequency" />
+        <watch expression="letter_frequency" />
+        <watch expression="free_blocks" />
+        <watch expression="free_list" />
+        <watch expression="right" />
+        <watch expression="graph" />
+      </configuration>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="animals[12]" language="ObjectiveC" />
+        <watch expression="pairs" />
+        <watch expression="keys_depth" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

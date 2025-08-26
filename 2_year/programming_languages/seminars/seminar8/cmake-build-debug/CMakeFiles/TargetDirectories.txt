@@ -1,0 +1,3 @@
+C:/Users/ibraa/CLionProjects/seminar8/cmake-build-debug/CMakeFiles/seminar8.dir
+C:/Users/ibraa/CLionProjects/seminar8/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ibraa/CLionProjects/seminar8/cmake-build-debug/CMakeFiles/rebuild_cache.dir

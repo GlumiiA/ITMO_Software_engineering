@@ -1,0 +1,68 @@
+section .data
+    aa db 0xAA            ; Первое значение
+    bb db 0xBB            ; Второе значение
+    cc db 0xCC            ; Третье значение
+    ff db 0xFF            ; Четвёртое значение
+
+section .text
+    extern print_hex      ; Объявляем функцию для печати
+
+global main
+
+print_hex:
+    mov     rdx, 1          
+    mov     rcx, 64       
+.loop:
+    push    rax             
+    sub     rcx, 4          ; Переходим к следующему 4-битному блоку
+    sar     rdi, cl         ; Сдвигаем число
+    and     rdi, 0xf        
+    lea     rsi, [codes + rdi] ; Находим символ в таблице
+
+    mov     rax, 1          
+    mov     rdi, 1          
+
+    push    rcx             
+    syscall                 
+    pop     rcx             
+
+    pop     rax             
+    test    rcx, rcx       ; Проверяем, закончили ли мы
+    jnz     .loop           ; Повторяем цикл, если не закончили
+
+    ret   
+
+_start:
+    call my_function      ; Вызов нашей функции
+    ret                   
+
+my_function:
+    ; Выравнивание стека
+    push rbx              ; Выравниваем на 8 байт
+    push rbp              ; Сохраняем базовый указатель
+
+    ; Установка базового указателя для локальных переменных
+    mov rbp, rsp          ; Инициализация rbp
+    sub rsp, 16           ; Выделяем 16 байт (4 переменные по 4 байта)
+
+    ; Запись значений в локальные переменные
+    mov byte [rbp - 1], aa
+    mov byte [rbp - 2], bb
+    mov byte [rbp - 3], cc
+    mov byte [rbp - 4], ff
+
+    ; Вывод значений
+    mov al, [rbp - 1]     
+    call print_hex       
+    mov al, [rbp - 2]     
+    call print_hex        
+    mov al, [rbp - 3]     
+    call print_hex        
+    mov al, [rbp - 4]     
+    call print_hex        
+
+    ; Освобождение памяти и завершение
+    mov rsp, rbp          ; Восстанавливаем стек
+    pop rbp               ; Восстанавливаем базовый указатель
+    pop rbx               ; Восстанавливаем предыдущий rbp
+    ret                   ; Возвращаем управление

@@ -1,0 +1,47 @@
+section .data
+codes:
+    db      '0123456789ABCDEF'
+
+section .text
+global _start
+
+exit:                        ; Это метка начала функции exit
+    mov  rax, 60             ; Это функция exit
+    xor  rdi, rdi            ; Это функция exit
+    syscall                  ; Это функция exit
+
+print_hex:
+    mov     rdx, 1          
+    mov     rcx, 64         ; Количество бит (8 байт * 8 бит)
+.loop:
+    push    rax             
+    sub     rcx, 4          ; Переходим к следующему 4-битному блоку
+    sar     rdi, cl         ; Сдвигаем число
+    and     rdi, 0xf        
+    lea     rsi, [codes + rdi] ; Находим символ в таблице
+
+    mov     rax, 1          
+    mov     rdi, 1          
+
+    push    rcx             
+    syscall                 
+    pop     rcx             
+
+    pop     rax             
+    test    rcx, rcx       ; Проверяем, закончили ли мы
+    jnz     .loop           ; Повторяем цикл, если не закончили
+
+    ret                     
+
+_start:
+    ; Выводим три числа
+    mov     rdi, 0x1122334455667788 ; Первое число
+    call    print_hex
+
+    mov     rdi, 0xAABBCCDDEEFF0000 ; Второе число
+    call    print_hex
+
+    mov     rdi, 0xDEADBEEFBEEFCAFE ; Третье число
+    call    print_hex
+
+    call exit

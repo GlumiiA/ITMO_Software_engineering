@@ -1,0 +1,36 @@
+section .data
+message:       db  'hello, world!', 10, 0  ; Добавляем нуль-терминат
+error_message: db  'hello, errors!', 10, 0  ; Добавляем нуль-терминат
+
+section .text
+global _start
+
+exit:
+    mov  rax, 60        ; Системный вызов для выхода
+    xor  rdi, rdi       ; Код выхода 0
+    syscall
+
+string_length:
+    xor  rax, rax        ; очищаем аккумулятор
+.counter:
+    cmp  byte [rdi + rax], 0 ; проверяем строку на конец (нуль-терминант)
+    je   .end
+    inc  rax                ; инкрементируем длину строки
+    jmp  .counter
+.end:
+    ret
+
+print_string:
+    push rbx                ; Резервируем 8 байт на стеке
+    call string_length      ; Длина строки возвращается в rax
+    pop rbx
+    mov  rdx, rax          ; Длина в rdx для системного вызова
+    mov  rax, 1            ; Системный вызов для записи
+    mov  rdi, 1            ; stdout
+    syscall
+    ret
+
+_start:
+    mov  rdi, message      ; Указатель на строку
+    call print_string       ; Печатаем строку
+    call exit               ; Выходим
